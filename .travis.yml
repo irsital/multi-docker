@@ -18,3 +18,16 @@ after_success:
   - docker push irsital/multi-nginx
   - docker push irsital/multi-server
   - docker push irsital/multi-worker
+
+deploy:
+  provider: elasticbeanstalk
+  region: eu-west-1
+  app: multi-docker
+  env: multi-docker
+  bucket_name: elasticbeanstalk-eu-west-1-013648882133
+  bucket_path: docker-multi
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: "$AWS_SECRET_KEY"
