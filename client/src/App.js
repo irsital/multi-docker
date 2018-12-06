@@ -15,8 +15,8 @@ class App extends Component {
       <Router>
         <div className="App">
           <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <p><Link style={this.divStyle} to="/">Home</Link> <Link style={this.divStyle} to="/otherpage">OtherPage</Link></p>
+            <h1>Fib<img src={logo} className="App-logo" alt="logo" />Calculator</h1><span>v2</span>
+            <p><Link style={this.divStyle} to="/">Home</Link> | <Link style={this.divStyle} to="/otherpage">OtherPage</Link></p>
           </header>
           <div>
               <br />
